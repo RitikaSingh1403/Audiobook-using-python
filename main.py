@@ -5,7 +5,7 @@ import PyPDF2
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 
-# Auto-select Zira if available, else first voice
+# Auto-select Zira if available, else first voice (Windows)
 for voice in voices:
     if "Zira" in voice.name:
         engine.setProperty('voice', voice.id)
@@ -16,12 +16,12 @@ engine.setProperty('rate', 170)  # Optimal speed (160-180 for clarity)
 engine.setProperty('volume', 0.9)  # Slightly below max to avoid distortion
 
 # Open PDF
-book = open('bond.pdf', 'rb')
+book = open('bond.pdf', 'rb')#use your pdf
 pdf_reader = PyPDF2.PdfReader(book)
 total_pages = len(pdf_reader.pages)
 
 # Read from page 6 onwards (adjust as needed)
-for page_num in range(6, total_pages):
+for page_num in range(6, total_pages):#adjust accordingly
     page = pdf_reader.pages[page_num]
     text = page.extract_text()
 
