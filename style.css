@@ -1,0 +1,153 @@
+:root {
+    --primary: #FF9BB3;
+    --secondary: #A2D5F2;
+    --accent: #FFD166;
+    --text: #5A5A5A;
+    --bg: #FFF5F7;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.bubble-container {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.header-bubble, .upload-bubble, .player-bubble {
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-bubble:hover, .upload-bubble:hover, .player-bubble:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+h1 {
+    color: var(--primary);
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.subtitle {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cloud-icon {
+    font-size: 3rem;
+    margin: 10px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.upload-btn, #convert-btn, #download-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.upload-btn:hover, #convert-btn:hover, #download-btn:hover {
+    background-color: #ff7a9b;
+    transform: scale(1.05);
+}
+
+.file-name {
+    color: var(--secondary);
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Floating bubbles animation */
+.floating-bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(162, 213, 242, 0.3);
+    border-radius: 50%;
+    animation: float-up 15s linear infinite;
+}
+
+.bubble:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    left: 10%;
+    top: 100%;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 100%;
+    animation-delay: 5s;
+}
+
+.bubble:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    left: 80%;
+    top: 100%;
+    animation-delay: 8s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes float-up {
+    0% { 
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    100% { 
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
