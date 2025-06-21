@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubbleBook - PDF to Audiobook</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bubble-container">
+        <div class="header-bubble">
+            <h1>📖 BubbleBook</h1>
+            <p class="subtitle">Turn your PDFs into cozy audiobooks!</p>
+        </div>
+        
+        <div class="upload-bubble">
+            <div class="cloud-icon">☁️</div>
+            <input type="file" id="pdf-upload" accept=".pdf" hidden>
+            <label for="pdf-upload" class="upload-btn">Choose PDF</label>
+            <p class="file-name">No file selected</p>
+            <button id="convert-btn" disabled>✨ Convert to Audiobook</button>
+        </div>
+        
+        <div class="player-bubble hidden">
+            <h2>Your Audiobook is Ready! 🎧</h2>
+            <audio controls id="audio-player"></audio>
+            <button id="download-btn">💾 Download MP3</button>
+        </div>
+    </div>
+
+    <div class="floating-bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
