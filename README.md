@@ -1,70 +1,76 @@
-# 📚 PDF to Audiobook Converter  
-*A simple Python script to turn your textbooks into listenable content*
+# 📚 PDF to Audiobook Converter
+
+A Python script to convert PDFs to audiobooks with a cute web interface demo.
 
 ## ✨ Features
-- 🔊 Text-to-speech conversion for PDFs
-- ⚡ Adjustable reading speed (150-200 WPM recommended)
-- 📄 Skip blank pages automatically
-- 🔢 Select specific page ranges
-- 🤖 Auto voice selection (prefers natural-sounding voices)
 
-## 🚀 Quick Start
+### Core Functionality
+- 🔊 Convert PDF text to natural sounding speech
+- ⚡ Adjustable reading speed (150-200 WPM recommended)
+- 📄 Automatically skips blank pages
+- 🔢 Customizable page range selection
+- 🤖 Auto-selects best available voice
+
+### Web Interface
+- 🎨 Beautiful bubble-themed design
+- 📁 Drag-and-drop PDF upload
+- ⏳ Realistic conversion animation
+- 🎧 Built-in audio player with download
+- 📱 Fully responsive layout
+
+## 🚀 Getting Started
 
 ### Prerequisites
 - Python 3.8+
-- PDF file you want to convert
+- PDF file to convert
 
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/user848403/PDFtoAudio.git
-cd PDFtoAudio
+git clone https://github.com/user848403/Audiobook-using-python.git
+cd Audiobook-using-python
 
 # Install dependencies
-pip install pyttsx3 PyPDF2
+pip install pyttsx3 PyPDF2 pydub
 ```
 
-Basic Usage
+## 🌐 Live Demo
 
-Place your PDF in the project folder
+Experience the UI demo on GitHub Pages:  
 
-Open main.py and edit these lines:
+
+## 🛠️ For Developers
+
+### Running Locally
+```bash
+git clone https://github.com/user848403/Audiobook-using-python.git
+cd Audiobook-using-python
+
 ```
-book = open('bond.pdf', 'rb')  # Change 'bond.pdf' to your filename
-for page_num in range(6, total_pages):  # Change 6 to your start page
-```
-
-Run the script:
-```
-python main.py
-```
-
-
-🌍 Cross-Platform Notes
-
-Windows: Best voice quality (uses Zira/Mark voices)
-
-macOS: Uses system voices (may need additional setup)
-
-Linux: Requires speech-dispatcher or espeak
-
-
 ❓ FAQ
 
-Q: Can I save the audio as an MP3 file?
+Q: Does the web demo actually convert PDFs?
 
-A: Not currently, but you can add this functionality using:
-```bash
-engine.save_to_file(text, 'output.mp3')
+A: It simulates the experience. For real conversion, run main.py locally.
+
+Q: How do I use the Python converter?
+
+```
+# Edit these lines in main.py:
+book = open('yourfile.pdf', 'rb')  # Change filename
+for page_num in range(X, Y):       # Set page range
 ```
 
-Q: Why is my PDF not being read correctly?
+Q: Can I save audio output?
+A: In main.py, add:
 
-A: This works best with text-based PDFs. Scanned documents won't work.
+```
+engine.save_to_file(text, 'output.mp3')
 
+```
 📜 License
+Educational use only. No warranties provided.
 
-This project is shared publicly for educational purposes. No warranties provided.
+Made with Python and ❤️
 
-Made with Python and ❤️ - Feel free to contribute!
-
+"A good book deserves a good voice"
