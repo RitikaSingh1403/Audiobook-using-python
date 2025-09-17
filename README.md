@@ -29,7 +29,7 @@ A Python script to convert PDFs to audiobooks with a cute web interface demo.
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/user848403/Audiobook-using-python.git
+git clone https://github.com/RitikaSingh1403/Audiobook-using-python.git
 cd Audiobook-using-python
 
 # Install dependencies
@@ -39,7 +39,7 @@ pip install pyttsx3 PyPDF2 pydub
 ## 🌐 Live Demo
 
 Experience the UI demo on GitHub Pages:  
-[https://user848403.github.io/Audiobook-using-python/](https://ritikasingh1403.github.io/Audiobook-using-python/)
+[https://RitikaSingh1403.github.io/Audiobook-using-python/](https://ritikasingh1403.github.io/Audiobook-using-python/)
 
 
 ## 🛠️ For Developers
